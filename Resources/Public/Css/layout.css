@@ -1,0 +1,156 @@
+.frame-layout-1 hr {
+    color: white;
+    border: none;
+    height: 5px; /* Höhe des horizontalen Strichs */
+    background: linear-gradient(to right, transparent, white, transparent); /* Farbverlauf für den Strich */
+}
+
+.White-text {
+    color: white;
+}
+
+.padding-auto {
+    padding: auto;
+}
+
+.frame-layout-1 div.zoom-in {
+    transition: transform .2s; /* Animation */
+}
+
+.frame-layout-1 div.zoom-in:hover {
+    transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.margin-top-and-bottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bg-image-div {
+    position: relative;
+    width: 100vw; /* 100% der Viewport-Breite */
+    height: 100vh; /* 100% der Viewport-Höhe */
+    overflow: hidden;
+  }
+  
+img.bg-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Bild proportional füllen */
+  }
+  
+.text-bg-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Textfarbe anpassen */
+    font-size: 24px; /* Schriftgröße anpassen */
+  }
+
+footer.footer-bg-color {
+    background-color: 4d5154;
+}
+
+.glow {
+    box-shadow: 0px 0px 20px gray
+}
+
+.header-image {
+    height: 100vh;
+    width: 100%; 
+    object-fit:cover;
+}
+
+.tree-image {
+    object-fit:cover;
+}
+
+.tree-profil {
+    position: absolute;
+    left: 26%;
+    top: 18%;
+}
+
+.header-image-smal {
+    height: 50vh;
+    width: 100%; 
+    object-fit:cover;
+}
+
+.headline {
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    color: white;
+    font-size: 40px;
+    width: 340px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.headline-2 {
+    position: absolute;
+    left: 30px;
+    top: 180px;
+    color: gray;
+    width: 340px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.headline-button {
+    position: absolute;
+    left: 30px;
+    top: 240px;
+    color: White;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.headImage {
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    width: 300px;
+}
+
+.t-red {
+    color: red;
+}
+
+.accordion {
+    --bs-accordion-btn-bg: #373b3e;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 3px solid green; 
+ }
+
+#c48 {
+    height: 100%;
+}
+
+#c47 {
+    height: 100%;
+}
+
+#c55 {
+    height: 100%;
+}
+
+#c56 {
+    height: 100%;
+}
+
+#c57 {
+    height: 100%;
+}
+
+#c58 {
+    height: 100%;
+}

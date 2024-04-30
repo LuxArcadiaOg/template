@@ -1,0 +1,16 @@
+mod.wizards.newContentElement.wizardItems {
+  // add the content element to the tab "common"
+  common {
+    elements {
+      myextension_newcontentelement {
+        iconIdentifier = content-extension
+        title = Glow Point
+        description = Create A Glowing Point
+        tt_content_defValues {
+          CType = myextension_newcontentelement
+        }
+      }
+    }
+    show := addToList(myextension_newcontentelement)
+  }
+}

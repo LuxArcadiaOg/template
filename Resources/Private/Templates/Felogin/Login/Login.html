@@ -1,0 +1,122 @@
+<div class="d-flex justify-content-center h-100" style="align-items: center;">
+    <div class="card glow" style="width: 22rem; height: 494.39px;">
+        <div class="card-body">
+
+        <f:flashMessages/>
+
+        <f:if condition="{messageKey}">
+            <h2 class="text-center">
+                Sing in
+            </h2>
+            <p class="text-center">
+                <f:render partial="RenderLabelOrMessage" arguments="{key: '{messageKey}_message'}"/>
+                <br>
+            </p>
+        </f:if>
+
+        <f:form target="_top" fieldNamePrefix="" action="login" requestToken="{requestToken}" additionalAttributes="{spellcheck: 'false'}">
+            <f:render section="content" arguments="{_all}"/>
+        </f:form>
+
+        </div>
+    </div>
+</div>
+
+<f:section name="content">
+    <fieldset>
+        <div>
+            <div class="row">
+                <div class="col-1">
+
+                </div>
+                <div class="col-1">
+                    <i class="fa-solid fa-user fa-xl" style="color: gray; vertical-align: text-bottom;"></i>
+                </div>
+                <div class="col-9">
+                    <label for="tx-felogin-input-username" style="width: 100%;">
+                        <f:form.textfield style="width: 100%; padding: 0.375rem 0.75rem;" name="user" required="true" placeholder="Username" additionalAttributes="{autocomplete: 'username'}" id="tx-felogin-input-username"/>
+                    </label>
+                </div>
+                <div class="col-1">
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <div>
+            <div class="row">
+                <div class="col-1">
+
+                </div>
+                <div class="col-1">
+                    <i class="fa-solid fa-lock fa-xl" style="color: gray; vertical-align: text-bottom;"></i>
+                </div>
+                <div class="col-9">
+                    <label for="tx-felogin-input-password" style="width: 100%;">
+                        <f:form.password style="width: 100%; padding: 0.375rem 0.75rem;" name="pass" placeholder="Password" additionalAttributes="{required: 'required', autocomplete: 'current-password'}" id="tx-felogin-input-password"/>
+                    </label>
+                </div>
+                <div class="col-1">
+
+                </div>
+            </div>
+        </div>
+
+        <f:if condition="{permaloginStatus} > -1">
+            <div>
+                <label for="permalogin">
+                    <f:translate id="permalogin"/>
+                    <f:if condition="{permaloginStatus} == 1">
+                        <f:then>
+                            <f:form.hidden name="permalogin" value="0" additionalAttributes="{disabled: 'disabled'}"/>
+                            <f:form.checkbox name="permalogin" id="permalogin" value="1" checked="checked"/>
+                        </f:then>
+                        <f:else>
+                            <f:form.hidden name="permalogin" value="0"/>
+                            <f:form.checkbox name="permalogin" id="permalogin" value="1"/>
+                        </f:else>
+                    </f:if>
+                </label>
+            </div>
+        </f:if>
+
+        <div class="felogin-hidden">
+            <f:form.hidden name="logintype" value="login"/>
+            <f:if condition="{redirectURL}!=''">
+                <f:form.hidden name="redirect_url" value="{redirectURL}" />
+            </f:if>
+            <f:if condition="{referer}!=''">
+                <f:form.hidden name="referer" value="{referer}" />
+            </f:if>
+            <f:if condition="{redirectReferrer}!=''">
+                <f:form.hidden name="redirectReferrer" value="off" />
+            </f:if>
+            <f:if condition="{noRedirect}!=''">
+                <f:form.hidden name="noredirect" value="1" />
+            </f:if>
+        </div>
+
+        <br>
+
+        <div class="text-center">
+            <f:if condition="{settings.showForgotPassword}">
+                <f:link.action action="recovery" controller="PasswordRecovery">
+                <f:render partial="RenderLabelOrMessage" arguments="{key: 'forgot_header'}"/>
+                </f:link.action>
+            </f:if> 
+        </div>
+
+        
+
+        <div class="text-center">
+            <br>
+            <div style="width: 100%;">
+                <f:form.submit style="border-radius: 20px; width: 161.31px;" class="btn btn-danger glow button-rund" value="Sing in" name="submit"/>
+            </div>
+            <a style="color: gray;" onmouseover="this.style.color='white'" onmouseout="this.style.color='gray'" href="/register">
+                Sing up
+            </a>
+        </div>
+
+    </fieldset>
+</f:section>

@@ -1,0 +1,25 @@
+.neon-dot-pink {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    top: -300px;
+    left: 200px;
+    mix-blend-mode: color-dodge;
+    opacity: 0.3;
+    background-color: #ff00ff; /* Neonfarbe, hier Pink (#ff00ff) als Beispiel */
+    box-shadow: 0 0 10px #ff00ff, 0 0 200px #ff00ff, 0 0 300px #ff00ff, 0 0 400px #ff00ff, 0 0 500px #ff00ff, 0 0 600px #ff00ff, 0 0 700px #ff00ff, 0 0 800px #ff00ff, 0 0 900px #ff00ff;
+}
+
+.neon-dot-blue {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    top: -350px;
+    left: 700px;
+    mix-blend-mode: color-dodge;
+    opacity: 0.3;
+    background-color: #6ba9ff; /* Neonfarbe, hier Pink (#ff00ff) als Beispiel */
+    box-shadow: 0 0 10px #6ba9ff, 0 0 200px #6ba9ff, 0 0 300px #6ba9ff, 0 0 400px #6ba9ff, 0 0 500px #6ba9ff, 0 0 600px #6ba9ff, 0 0 700px #6ba9ff, 0 0 800px #6ba9ff, 0 0 900px #6ba9ff;
+}

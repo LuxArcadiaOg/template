@@ -1,0 +1,25 @@
+
+<div class="row">
+	<div class="col-1">
+
+	</div>
+	<div class="col-1">
+		<i class="fa-solid fa-user fa-xl" style="color: gray; vertical-align: text-bottom;"></i>
+	</div>
+	<div class="col-10">
+		{namespace femanager=In2code\Femanager\ViewHelpers}
+		<div class="femanager_fieldset femanager_username form-group"> 
+			<div class="col-sm-10">
+				<femanager:form.textfield
+				id="femanager_field_username"
+				property="username"
+				class="form-control"
+				placeholder="{f:translate(key: 'tx_femanager_domain_model_user.username')} *"
+				additionalAttributes="{femanager:Validation.FormValidationData(settings:settings,fieldName:'username')}" />
+			</div>
+		</div>	
+	</div>
+	<div class="col-1">
+
+	</div>
+</div>
